@@ -1,2 +1,5 @@
-# cmake-win-template
-Template Repo for CMake Projects on windows
+# Fast Hashing Exploration
+
+*An effort to explore fast hashing functions*
+
+
