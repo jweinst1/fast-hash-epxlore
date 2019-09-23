@@ -13,3 +13,11 @@ void timer_func_multi(timed_func fn, double* laps, size_t lap_count)
         TIMING_FUNCTION_CODE(fn, *laps++);
     }
 }
+
+void timer_funcs_multi(func_time_slot* fns, size_t pair_count)
+{
+    while(pair_count--) {
+        TIMING_FUNCTION_CODE(fns->fn, fns->timed);
+        fns++;
+    }
+}

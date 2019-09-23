@@ -22,8 +22,18 @@
  */
 typedef void (*timed_func)(void);
 
+/**
+ * Used to measure different functions against each other.
+ */
+typedef struct {
+    timed_func fn;
+    double timed;
+} func_time_slot;
+
 double timer_func_single(timed_func fn);
 
 void timer_func_multi(timed_func fn, double* laps, size_t lap_count);
+
+void timer_funcs_multi(func_time_slot* fns, size_t pair_count);
 
 #endif // FAST_HASH_TIMER_H
